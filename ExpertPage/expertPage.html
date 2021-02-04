@@ -58,21 +58,31 @@
             </div>
         </header>
         <!-- <div class="empty" style="width: 100px; visibility: hidden;">bhmh</div> -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-12">
+                    <a>درمانکده</a>
+                    <i class="fa fa-chevron-left"></i>
+                    <a id="doctor-spec"></a>
+                    <i class="fa fa-chevron-left"></i>
+                    <span id="doctor-name"></span>
+                </div>
+            </div>
+        </div>
         <div class="content row" style="display: flex; margin-top: 100px;">
             <div class="docInfo sticky col-4 cl-md-4" style="position: -webkit-sticky; /* Safari */
             position: sticky;
             top: 0; width:40%; border:0 solid #e2e8f0; box-sizing:inherit; display: block;">
             <div class="box">
                 <div class="picture-container">
-                    <div class="picture w-80" >
-                        <img style="width: 105px;
-                        height: 105px;  border-radius: 50%!important;" src="./docPic.JPG" alt="docPic">
+                    <div class="picture w-80" id="doctor-image" >
+                        
                     </div>
                 </div>
                 <div class="info" style="display:block">
-                <h2 class="mt-3"> دکتر فتانی</h1>
-                <h3 class="mt-3">فوق تخصص غدد و متابولیسم</h2>
-                <h4 class="mt-3">شماره نظام پزشکی:۰۰۰</h3>
+                <h2 class="mt-3" id="doctor-name"></h1>
+                <h3 class="mt-3" id="doctor-spec"></h2>
+                <h4 class="mt-3" id="doctor-nezam">شماره نظام پزشکی: </h3>
                 </div>
                 <div class="smallbox1 mt-5 p-2 w-100" style="border-radius: 10px !important;
                 margin: 0px 10px;background-color: #e2e8f0;border-radius: 10px; " >
@@ -85,7 +95,9 @@
                     <div class="littleBox  col-4">
                         <i class="fas fa-book fa-2x col-12 m-2" style="color: #444;"></i>
                         <span class="m-2"style="width: 100%; font-size: smaller;">تجربه</span>
-                        <span class="m-2" style="width: 100%; font-size: small;">۱ سال</span></div>
+                        <span class="m-2" style="width: 100%; font-size: small;" id="doctor-exp">
+                             سال
+                        </span></div>
                     
                     <div class="littleBox  col-4">
                         <i class="fas fa-clock fa-2x col-12 m-2" style="color: #444;"></i>
@@ -224,17 +236,16 @@
                                             <h4 style="font-size: 14px;color: #3b4157; font-weight: 700 !important;">
                                             آدرس مطب
                                             </h4>
-                                            <p class="text-place" style="line-height: 30px;">
-                                                
-                                    خیابان سعادت آباد، نبش خیابان 27 - پلاک 18 - بالای پرده سرای یاشار
-                                
+                                            <p class="text-place" style="line-height: 30px;" id="doctor-address">
                                             </p>
                                             <h4>
                                                 <span style="font-size: 14px; font-weight: 700 !important;"
                                                  class="text-place">
                                                  تلفن گویا:
                                                 </span>
-                                                <a href="tel:02188888888" class="text-place">02188888888 </a>
+                                                <a  class="text-place" id="doctor-phone">
+
+                                                </a>
                                             </h4>
                                         </div>
                                     
@@ -250,39 +261,49 @@
                                 
                                             </h4>
                                             <div class="comments-body">
-                                                <ul>
-                                                    <i class="fa fa-chevron-circle-right" aria-hidden="true"></i>
+                                                <ul id="doctor-week">
+                                                    <!-- <i class="fa fa-chevron-circle-right" aria-hidden="true"></i> -->
                                                     <li class="li_frst">
-                                                        <h6>دوشنبه</h6>
-                                                        <span>1</span>
+                                                        <h6>شنبه</h6>
                                                         <p>دی</p>
+                                                        <span id="doctor-a"></span>
                                                     </li>
                                                     <li>
                                                         <h6>یکشنبه</h6>
-                                                        <span>2</span>
                                                         <p>دی</p>
+                                                        <span id="doctor-a"></span>
                                                     </li>
                                                     <li class="li_thrd">
-                                                        <h6>شنبه</h6>
+                                                        <h6>دوشنبه</h6>
                                                         <span>3</span>
                                                         <p>دی</p>
+                                                        <span id="doctor-a"></span>
                                                     </li>
                                                     <li>
-                                                        <h6>جمعه</h6>
+                                                        <h6>سه شنبه</h6>
                                                         <span>4</span>
                                                         <p>دی</p>
-                                                    </li>
-                                                    <li>
-                                                        <h6>پنجشنبه</h6>
-                                                        <span>5</span>
-                                                        <p>دی</p>
+                                                        <span id="doctor-a"></span>
                                                     </li>
                                                     <li>
                                                         <h6>چهارشنبه</h6>
+                                                        <span>5</span>
+                                                        <p>دی</p>
+                                                        <span id="doctor-a"></span>
+                                                    </li>
+                                                    <li>
+                                                        <h6>پنج شنبه</h6>
                                                         <span>6</span>
                                                         <p>دی</p>
+                                                        <span id="doctor-a"></span>
                                                     </li>
-                                                    <i class="fa fa-chevron-circle-left" aria-hidden="true"></i>
+                                                    <li>
+                                                        <h6>جمعه</h6>
+                                                        <span>6</span>
+                                                        <p>دی</p>
+                                                        <span id="doctor-a"></span>
+                                                    </li>
+
                                                 </ul>
                                             </div>
                                     </div>

@@ -14,6 +14,7 @@ function getDoctorList(item) {
   xhttp.onreadystatechange = function () {
     if (this.readyState == 4 && this.status == 200) {
       console.log(this.responseText);
+      doctor(JSON.parse(this.responseText));
     }
   };
   xhttp.open(
@@ -22,6 +23,38 @@ function getDoctorList(item) {
     true
   );
   xhttp.send();
+}
+
+function doctor(data) {
+  console.log(data);
+  document.getElementById("doctor-name").innerHTML = data.name;
+  document.getElementById("doctor-spec").innerHTML = data.spec;
+  document.getElementById("doctor-nezam").innerHTML += data.number;
+  let doctorImg = `
+  <img style="width: 105px;
+            height: 105px;
+              border-radius: 50%!important;"
+               src="${data.avatar}" alt="docPic">`;
+  document.getElementById("doctor-image").innerHTML = doctorImg;
+  document.getElementById("doctor-address").innerHTML = data.address;
+  document.getElementById("doctor-phone").innerHTML = data.phone;
+  let doctorWeek = "";
+  //   for(let i = 0 ; i < data.week_days.length; i++){
+  //     if(data.week_days[i] == true){
+  //         doctorweek = `
+  //         <li class="li_frst">
+  //  <h6>شنبه</h6>
+  //  p
+  // </li>`
+  //     }
+  //   }
+  let week = document.getElementById("doctor-week").getElementsByTagName("li");
+  for (let i = 0; i < week.length; i++) {
+    if (data.week_days[i] == true) {
+      week[i].getElementsByTagName("span")[0].innerHTML = "دارد";
+    } else week[i].getElementsByTagName("span")[0].innerHTML = "ندارد";
+    console.log(week[i]);
+  }
 }
 
 $(".comment-slider").slick({
