@@ -1,0 +1,281 @@
+@font-face {
+    font-family: Vizir;
+    src: url("../assets/Vazir.tff");
+}
+
+body {
+    margin: 0;
+    width: 100%;
+    position: relative;
+    font-family: Vazir;
+}
+a {
+    text-decoration: none;
+}
+/*header*/
+.h-container {
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.05);
+    padding: 10px 0px;
+    height: 65px;
+    padding: 0px 10vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    position: -webkit-sticky; /* Safari */
+    position: sticky;
+    top: 0;
+    background-color: white;
+    z-index: 1;
+}
+.h-entity {
+    display: inherit;
+    height: 50px;
+    width: 120px;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    transition: all 0.3s ease;
+    color: rgb(59,66,87);
+    font-size: 14px;
+}
+.h-entity:hover {
+    color: #FB815F;
+    transition: all 0.3s ease;
+}
+.h-dropdown {
+    position: relative;
+    display: inline-flex;
+}
+.h-dropdown-container {
+    font-size: 13px;
+    display: none;
+    margin-top: 69px;
+    flex-direction: column;
+    flex-wrap: wrap;
+    position: absolute;
+    width: 290px;
+    max-height: 340px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.1);
+    padding: 12px 16px;
+    z-index: 1;
+    border-radius: 0px 0px 10px 10px;
+    background-color: white;
+    transition: all 0.3s ease;
+    z-index: 1;
+}
+.h-dropdown:hover .h-dropdown-container {
+    display: flex;
+    transition: all 0.3s ease;
+}
+.h-dropdown-content {
+    height: 40px;
+    width: 130px;
+    margin: 5px;
+    display: flex;
+    justify-content: right;
+    align-items: center;
+    padding-right: 5px;
+    text-align: right;
+    transition: all 0.3s ease;
+    color: rgb(59,66,87);
+}
+.h-dropdown-content:hover {
+    color: 1880DF;
+    transition: all 0.3s ease;
+}
+.h-dropdown-content a: visited {
+    color: rgb(59,66,87);
+}
+.h-dropdown button {
+    width: 100%;
+    height: 100%;
+    padding: 6px;
+    font-size: 14px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: #FB815F;
+    border-style: solid;
+    transition: all 0.3s ease;
+    font-family: Vazir;
+    color: #FB815F;
+    background: white;
+}
+.h-dropdown button:hover {
+    color: white;
+    background-color: #FB815F;
+    transition: all 0.3s ease;
+}
+
+/*Slide Box*/
+.slide-container {
+    height: auto;
+    width: 80vw;
+    margin: 2vh 10vw;
+}
+
+/*Main Box*/
+.m-container {
+    height: auto;
+    width: 55vw;
+    margin-right: 2vw;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+.m-card {
+    width: 250px;
+    height: 270px;
+    margin-bottom: 2vw;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: lightgray;
+    transition: all 0.3s ease;
+}
+.m-card:hover {
+    border-color: #FB815F;
+    transition: all 0.3s ease;
+}
+.m-cardname {
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.m-cardpic {
+    height: 55px;
+    width: 55px;
+    margin: 10px;
+    border-radius: 10px;
+    background-color: #E9C9FD;
+}
+.m-textbox {
+    width: 230px;
+    height: 120px;
+    margin-top: -20px;
+    padding: 10px;
+    border-style: hidden;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+.m-box {
+    height: 60px;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+}
+.m-buttonbox {
+    height: auto;
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+.m-buttonbox button {
+    width: 90%;
+    height: 50px;
+    padding: 6px;
+    margin: 10px;
+    font-size: 17px;
+    border: none;
+    cursor: pointer;
+    border-radius: 10px;
+    border-color: #FB815F;
+    border-style: solid;
+    transition: all 0.3s ease;
+    font-family: Vazir;
+    background: white;
+}
+.m-buttonbox button:hover {
+    background-color: #FB815F;
+    transition: all 0.3s ease;
+}
+/*Side Box*/
+.s-container {
+    position: sticky;
+    position: -webkit-sticky;
+    top: 75px;
+    padding: 10px;
+    margin-right: 10vw;
+    max-height: 84vh;
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    border-radius: 10px;
+    border-style: solid;
+    border-color: lightgray;
+    align-self: flex-start;
+}
+.s-title {
+    height: 30px;
+    width: 100%;
+    border-bottom-style: solid;
+}
+.s-scroll {
+    width: 100%;
+    height: auto;
+    overflow-y: scroll;
+}
+.s-highlight {
+    height: auto;
+    width: 35px;
+    text-align: center;
+    padding: 10px;
+    background-color: #E4F3FE;
+    border-radius: 10px;
+}
+
+/*footer*/
+.f-container {
+    width: 100%;
+    height: 300px;
+    margin-top: 2vw;
+    background-color: #1880DF;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+.f-holder {
+    width: 27vw;
+    height: 100%;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.f-linkholder {
+    width: 50%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.f-linkholder button {
+    width: 95%;
+    height: 45px;
+    margin: 5px;
+    padding: 6px;
+    font-size: 17px;
+    background-color: #1880DF;
+    color: white;
+    border: none;
+    border-top-style: solid;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-family: Vazir;
+}
+.f-linkholder button:hover {
+    background-color: white;
+    color: #1880DF;
+    transition: all 0.3s ease;
+}
+.f-socialmedia {
+    height: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+}
